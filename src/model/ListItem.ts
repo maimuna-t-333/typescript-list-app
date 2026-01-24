@@ -1,3 +1,4 @@
+// ListItem.ts
 export interface item{
     id:string;
     item:string;
@@ -5,31 +6,37 @@ export interface item{
 }
 
 export default class ListItem implements item{
-    constructor(
-        private_id:string="",
-        private_item:string="",
-        private_checked:boolean=false,
-    ){}
+    private _id:string;
+    private _item:string;
+    private _checked:boolean;
+
+    constructor(id:string = "", item:string = "", checked:boolean = false){
+        this._id = id;
+        this._item = item;
+        this._checked = checked;
+    }
 
     get id():string{
-        return this.id;
+        return this._id;
     }
 
     set id(id:string){
-        this.id=id;
+        this._id = id;
     }
+    
     get item():string{
-        return this.item;
+        return this._item;
     }
 
     set item(item:string){
-        this.item=item;
+        this._item = item;
     }
+    
     get checked():boolean{
-        return this.checked;
+        return this._checked;
     }
 
     set checked(checked:boolean){
-        this.checked=checked;
+        this._checked = checked;
     }
 }
