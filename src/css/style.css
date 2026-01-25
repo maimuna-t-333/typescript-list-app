@@ -6,7 +6,3 @@
   font-family: 'Inter', sans-serif;
 }
 
-.offscreen {
-  position: absolute;
-  left: -10000px;
-}
